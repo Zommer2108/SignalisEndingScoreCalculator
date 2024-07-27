@@ -15,33 +15,34 @@ public class main {
         System.out.print("Active playtime:");
         totalPurePlaytime = Integer.parseInt(userInput.nextLine());
 
-        System.out.println("How many enemies did you kill?");
-        System.out.print("Enemies killed:");
+        System.out.println("\nHow many enemies did you kill?");
+        System.out.print("Enemies killed: ");
         kills = userInput.nextInt();
 
         System.out.println("\nHow often did you die and took damage?");
-        System.out.print("Damage taken:");
+        System.out.print("Damage taken: ");
         damageTaken = userInput.nextInt();
-        System.out.print("Deaths:");
+        System.out.print("Deaths: ");
         deaths = userInput.nextInt();
 
         System.out.println("\nHow often did you cheat death?");
-        System.out.print("Neardeath:");
+        System.out.print("Neardeath: ");
         nearDeathSurvives = userInput.nextInt();
 
         System.out.println(
                 "\nHow often did you talk to NPCs? (if you spoke with everyone and exhausted the dialogue just enter a value greater than 35)");
-        System.out.print("Amount of NPC interactions:");
+        System.out.print("Amount of NPC interactions: ");
         npcTalks = userInput.nextInt();
 
         System.out.println(
                 "\nHow long were your regenTime? (The time regenating after experiencing near death state ~2 minutes)");
-        System.out.print("regenTime (in minutes):");
+        System.out.print("regenTime (in minutes): ");
         regenTime = userInput.nextInt();
 
         System.out.println(
                 "\nHow much time did you spent in the Penrose Memory? (Waking up to return to the great red desert)");
-        System.out.print("Penrose memory time (in minutes):");
+        System.out.print("Penrose memory time (in minutes): ");
+        System.out.println();
         memoryTime = userInput.nextInt();
         userInput.close();
 
@@ -88,25 +89,26 @@ public class main {
             ending = 1;
         }
 
-        // Outputting Ending + Data
+        // Putting out Ending + Data
         switch (ending) {
             case 0:
+
                 System.out.println(
-                        "It seems you need to repeat the cycle to fulfill your promise...\n Ending received: Memory");
+                        "It seems you need to repeat the cycle to fulfill your promise...\nEnding received: Memory");
                 break;
 
             case 1:
                 System.out.println(
-                        "You did not achieve it... You could not face Ariane and had to abandon her, running away and die alone...\n Ending received: Leave");
+                        "You did not achieve it... You could not face Ariane and had to abandon her, running away and die alone...\nEnding received: Leave");
                 break;
 
             case 2:
-                System.out.println("You remembered the promise...\n Ending received: Promise");
+                System.out.println("You remembered the promise...\nEnding received: Promise");
                 break;
             default:
                 System.out.println("ACTHUNG! ACHTUNG! 39486 60170 24326 01064...");
                 break;
         }
-        System.out.println("Totalscore\nCirlce: " + cirlce + " Leave: " + leave + " Deeath: " + death);
+        System.out.println("Totalscore -\nCirlce: " + cirlce + " Leave: " + leave + " Death: " + death);
     }
 }
